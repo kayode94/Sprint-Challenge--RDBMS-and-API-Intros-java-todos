@@ -27,6 +27,10 @@ public class UserServiceImpl implements UserService
     /**
      * Connects this service to the auditing service in order to get current user name
      */
+
+    @Autowired
+    private TodosService todosService;
+
     @Autowired
     private UserAuditing userAuditing;
 
