@@ -77,7 +77,7 @@ public class UserServiceImpl implements UserService
             .toLowerCase());
 
         // saving todos here
-        
+
         for(Todos todos : user.getTodos())
         {
             Todos newTodo = new Todos();

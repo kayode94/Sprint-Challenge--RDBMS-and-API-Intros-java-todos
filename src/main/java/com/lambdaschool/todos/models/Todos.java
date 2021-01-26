@@ -12,7 +12,7 @@ public class Todos extends Auditable
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long todoid;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String description;
 
     private boolean completed = false;
