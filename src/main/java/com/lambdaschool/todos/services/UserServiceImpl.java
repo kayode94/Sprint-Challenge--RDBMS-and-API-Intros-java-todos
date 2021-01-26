@@ -76,9 +76,13 @@ public class UserServiceImpl implements UserService
         newUser.setPrimaryemail(user.getPrimaryemail()
             .toLowerCase());
 
+        // saving todos here
+        
         for(Todos todos : user.getTodos())
         {
-            Todos newTodo = new Todos(newUser, todos.getDescription());
+            Todos newTodo = new Todos();
+            newTodo.setDescription(todos.getDescription());
+            newTodo.setUser(newUser);
             newUser.getTodos().add(newTodo);
         }
 
